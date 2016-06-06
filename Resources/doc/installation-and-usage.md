@@ -37,8 +37,8 @@ And finally, add the route to `app/config/routing.yml`:
 
 ```
 al_swagger_ui:
-    resource: @ALSwaggerUIBundle/Resources/config/routing.yml
-    prefix: /docs
+    resource: "@ALSwaggerUIBundle/Resources/config/routing.yml"
+    prefix:   /docs
 ```
 
 The swagger-ui page for your REST API should now be served at 
@@ -61,8 +61,8 @@ If you already have a set of Swagger-compliant JSON files, you can configure thi
 ```yaml
  # app/config/routing.yml
 al_swagger_ui_static_resources:
-    resource: @ALSwaggerUI/Resources/config/static_resources_routing.yml
-    prefix: /swagger-docs
+    resource: "@ALSwaggerUIBundle/Resources/config/static_resources_routing.yml"
+    prefix:   /swagger-docs
 ```
 3. Configure the `static_resources` config:
 
