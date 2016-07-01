@@ -65,7 +65,9 @@ class StaticResourcesController extends Controller
             foreach ($files as $file) {
 
                 $data = json_decode($file->getContents(), true);
-                $data['basePath'] = $request->getBaseUrl() . $data['basePath'];
+                if (array_key_exists('basePath', $data)) {
+                    $data['basePath'] = $request->getBaseUrl() . $data['basePath'];
+                }
                 $response = new JsonResponse($data);
                 return $response;
             }
